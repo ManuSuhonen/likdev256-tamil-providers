@@ -96,7 +96,12 @@ class TamilYogiProvider : MainAPI() { // all providers must be an instance of Ma
     }
 
     override suspend fun load(url: String): LoadResponse? {
-        val doc = app.get(url).document
+        val doc = app.get(
+            url = url,
+            headers = mapOf(
+                "User-Agent" to "Mozilla/5.0 (Linux; Android 10; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Mobile Safari/537.36 Edg/114.0.0.0",
+            )
+        ).document
         //Log.d("Doc", doc.toString())
         val titleL = doc.selectFirst("#content h1 a")?.attr("title")?.toString()?.trim() ?: return null
         val titleRegex = Regex("(^.*\\)\\d*)")

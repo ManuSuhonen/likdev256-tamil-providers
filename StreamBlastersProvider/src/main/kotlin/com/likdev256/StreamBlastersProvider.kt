@@ -27,8 +27,8 @@ class StreamBlastersProvider : MainAPI() { // all providers must be an instance 
         "$mainUrl/category/kannada/" to "Kannada",
         "$mainUrl/category/malayalam/" to "Malayalam",
         "$mainUrl/category/tamil/" to "Tamil",
-        "$mainUrl/category/telugu/" to "Telugu"
-        "$mainUrl/category/web-series/ to "Webseries"
+        "$mainUrl/category/telugu/" to "Telugu",
+        "$mainUrl/category/web-series/" to "Webseries"
     )
 
     override suspend fun getMainPage(

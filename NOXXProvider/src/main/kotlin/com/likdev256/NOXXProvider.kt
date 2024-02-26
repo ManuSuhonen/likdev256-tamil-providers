@@ -11,6 +11,7 @@ import com.lagradost.nicehttp.NiceResponse
 import com.lagradost.cloudstream3.extractors.DoodLaExtractor
 import okhttp3.FormBody
 
+
 class NOXXProvider : MainAPI() { // all providers must be an instance of MainAPI
     override var mainUrl = "https://noxx.to"
     override var name = "NOXX"
